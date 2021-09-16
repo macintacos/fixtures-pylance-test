@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fix"
+version = "0.1.0"
+description = ""
+authors = ["Julian Torres <julian.torres@mongodb.com>"]
+packages = [
+  { include="unit", from="tests" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pylint = "^2.11.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+fix = "fix.main:run"
